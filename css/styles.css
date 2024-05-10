@@ -28,3 +28,7 @@ img {
 div.classNames {
   background: #2875ed;
 }
+
+a {
+  cursor: pointer;
+}

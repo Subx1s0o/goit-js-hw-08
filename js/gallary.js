@@ -67,19 +67,7 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
 images.forEach((image) => {
-  const li = document.createElement("li");
-  const a = document.createElement("a");
-  const img = document.createElement("img");
-
-  a.setAttribute("href", image.original);
-  img.setAttribute("src", image.preview);
-  img.setAttribute("alt", image.description);
-  img.setAttribute("data-origin", image.original);
-  img.style.maxWidth = "360px";
-
-  a.appendChild(img);
-  li.appendChild(a);
-  gallery.appendChild(li);
+  gallery.innerHTML += `<li><a><img style="width:360px" src="${image.preview}" alt="${image.description}" data-origin="${image.original}" /></a></li>`;
 });
 
 gallery.addEventListener("click", (event) => {
